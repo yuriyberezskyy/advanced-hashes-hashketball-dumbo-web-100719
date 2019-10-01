@@ -118,17 +118,17 @@ name = "Brooke Lopez"
 home_players = game_hash[:home][:players]
 team = "Charlotte Hornets"
 
+# Takes in an argument of a player's name
+# and returns the number of points scored for that player
 def num_points_scored(player_name)
-  #Goes through hash, then home away, then names, colors, players
-  game_hash.each do |location, team_data|
-      #Goes through players, then a name and its data
-      team_data[:players].each do |name, data|
-      if name == player_name
-        return data[:points]
+    game_hash.each do |origin, team|
+      stats = team[:players][player_name]
+      if stats # If not empty
+          return stats[:points]
       end
     end
-    end
 end
+
 
 def shoe_size name
 game_hash.each do |team_position, team_data|
