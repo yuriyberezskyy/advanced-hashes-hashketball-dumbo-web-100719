@@ -119,6 +119,7 @@ home_players = game_hash[:home][:players]
 team = "Charlotte Hornets"
 
 def num_points_scored(name) 
+   new_score_name = {}
    name_basket = ""
    score = 0 
    new_score_name[name_basket] = score
