@@ -124,7 +124,7 @@ def num_points_scored(name)
    score = 0 
    new_score_name[name_basket] = score
   game_hash.each do |team_postion, team_data|
-    team_data[:players].each do |player,player_data|
+    team_data each do |player,player_data|
       if player == name
         return new_score_name[player] = player_data[:points] 
       end
