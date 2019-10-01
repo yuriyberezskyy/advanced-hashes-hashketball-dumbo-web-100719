@@ -40,7 +40,7 @@ describe 'hashketball' do
     end
 
   end
-
+  =end
   describe '#shoe_size' do
 
     it 'knows the shoe size of each player' do
