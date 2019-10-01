@@ -137,7 +137,6 @@ def num_points_scored(player_search)
   end
 end
 
-num_points_scored("Brendan Haywood")
 
 def shoe_size(name)
   find_shoe = players.find {|player| player.fetch(:player_name) == name }
