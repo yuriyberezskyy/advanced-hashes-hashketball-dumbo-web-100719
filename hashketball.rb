@@ -122,14 +122,15 @@ def num_points_scored(name)
    name_basket = ""
    score = 0 
    new_score_name[name_basket] = score
-    game_hash.each do |team_postion, team_data|
-      team_data[:players].each do |player,player_data|
+  game_hash.each do |team_postion, team_data|
+    team_data[:players].each do |player,player_data|
       if player == name
         return new_score_name[player] = player_data[:points] 
       else
         return nil
       end
     end
+  end
 end
 
 def shoe_size name
