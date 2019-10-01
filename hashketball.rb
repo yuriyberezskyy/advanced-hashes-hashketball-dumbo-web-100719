@@ -123,7 +123,7 @@ def num_points_scored(name)
     team_data[:players].each do |player_name, player_data|
     if player_name == name
       return player_data[:points]
-    else player_name =! name
+    else
     return nil
     end
 end
