@@ -127,10 +127,15 @@ def players
   total_players
 end
 
-def num_points_scored(name)
-  find_player = players.find {|player| player.fetch(:player_name) == name }
-  find_player.fetch(:points)
-end 
+def num_points_scored(player_search)
+  game_hash.each do |team, team_info|
+    team_info[:players].each do |player|
+      if player[:player_name] == player_search
+        return player[:points]
+      end
+    end
+  end
+end
 
 num_points_scored("Brendan Haywood")
 
