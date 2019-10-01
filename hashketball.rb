@@ -120,14 +120,10 @@ team = "Charlotte Hornets"
 
 # Takes in an argument of a player's name
 # and returns the number of points scored for that player
-def num_points_scored(player_name)
-    game_hash.each do |origin, team|
-      stats = team[:players][player_name]
-      if stats # If not empty
-          return stats[:points]
-      end
-    end
-end
+def num_points_scored(name)
+  find_player = players.find {|player| player.fetch(:player_name) == name }
+  find_player.fetch(:points)
+end 
 
 
 def shoe_size name
