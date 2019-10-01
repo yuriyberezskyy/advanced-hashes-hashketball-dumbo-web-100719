@@ -23,6 +23,7 @@ describe 'hashketball' do
     end
   end
 
+  =begin
   describe '#num_points_scored' do
 
     it 'knows the number of points scored by each player' do
