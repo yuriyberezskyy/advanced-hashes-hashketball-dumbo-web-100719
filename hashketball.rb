@@ -126,6 +126,10 @@ def num_points_scored(name)
       team_data[:players].each do |player,player_data|
       if player == name
         return new_score_name[player] = player_data[:points] 
+      else
+        return nil
+      end
+    end
 end
 
 def shoe_size name
